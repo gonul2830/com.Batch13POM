@@ -14,7 +14,7 @@ public class ConfigReader {
     //bu objeye Class dısından da müdahale olmaması icin private yapıyoruz.(opsiyonel)
 
 
-  static private Properties properties;
+   private static Properties properties;
 
   static {
       String path="src/configuration.properties";
