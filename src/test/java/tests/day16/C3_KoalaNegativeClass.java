@@ -2,6 +2,7 @@ package tests.day16;
 
 import org.testng.annotations.Test;
 import pages.KoalaResortLoginPage;
+import utilities.Driver;
 import utilities.TestBase;
 
 public class C3_KoalaNegativeClass extends TestBase {
@@ -23,6 +24,6 @@ public class C3_KoalaNegativeClass extends TestBase {
         obj.kullaniciAdi.sendKeys("manager1");
         obj.passwordTextBox.sendKeys("manager1!");
         obj.loginButonu.click();
-
+        Driver.closeDriver();
     }
 }

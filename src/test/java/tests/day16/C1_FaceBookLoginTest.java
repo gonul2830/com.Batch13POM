@@ -8,7 +8,7 @@ import utilities.TestBase;
 
 public class C1_FaceBookLoginTest extends TestBase {
 
-    @Test
+    @Test(groups = {"mini_regression,smoke_test"})
     public void gelenekselTest(){
         driver.get("https://facebook.com");
 
@@ -23,10 +23,11 @@ public class C1_FaceBookLoginTest extends TestBase {
 
        WebElement loginButonu = driver.findElement(By.xpath("//button[@name='login']"));
        loginButonu.click();
+       driver.close();
     }
 
 
-    @Test
+    @Test(groups = "mini_regression")
     public void pageIleTest(){
         driver.get("https://facebook.com");
         FaceBookLoginPage faceBookLoginPage   = new  FaceBookLoginPage(driver);
@@ -34,6 +35,7 @@ public class C1_FaceBookLoginTest extends TestBase {
         faceBookLoginPage.emailTextBox.sendKeys("gonul@gmail.com");
         faceBookLoginPage.passwordTextBox.sendKeys("12345");
         faceBookLoginPage.loginButonu.click();
+        driver.close();
     }
 
 
